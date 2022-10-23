@@ -3,7 +3,6 @@ package es.sublimestudio.viewmodelwithapirest.views.genres
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import es.sublimestudio.viewmodelwithapirest.models.Genre
 import es.sublimestudio.viewmodelwithapirest.models.Genres
 import es.sublimestudio.viewmodelwithapirest.remote.ApiService
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -29,5 +28,3 @@ class GenresViewModel: ViewModel() {
     }
 
 }
-
-data class GenresState(val genresList: Genres, val loading: Boolean)

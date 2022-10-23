@@ -35,7 +35,8 @@ class GenresFragment : Fragment() {
 
         progressBar = view.findViewById(R.id.progressDialog)
 
-        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
 
                 // podemos usar varios "launch"
                 launch {
@@ -54,6 +55,7 @@ class GenresFragment : Fragment() {
                     }
                 }
 
+            }
         }
 
         adapter = GenresAdapter {
